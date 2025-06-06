@@ -737,12 +737,14 @@
             padding: 5px 0;
         }
 
+        /* Calendar day styles */
         .calendar-day {
             text-align: center;
             padding: 10px 0;
             border-radius: 4px;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
         }
 
         .calendar-day:hover {
@@ -757,6 +759,7 @@
 
         .calendar-day.event {
             position: relative;
+            background: rgba(255, 70, 85, 0.1);
         }
 
         .calendar-day.event::after {
@@ -769,6 +772,25 @@
             height: 5px;
             background: var(--primary);
             border-radius: 50%;
+        }
+
+        .calendar-day.prev-month,
+        .calendar-day.next-month {
+            opacity: 0.3;
+            cursor: default;
+        }
+
+        /* Event display styles */
+        #events-display {
+            margin-bottom: 30px;
+        }
+
+        .no-events {
+            text-align: center;
+            color: var(--accent);
+            padding: 20px;
+            background: rgba(15, 25, 35, 0.5);
+            border-radius: 5px;
         }
 
         .events-list {
